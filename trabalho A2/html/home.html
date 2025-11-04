@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6ª Geração de Consoles</title>
+    <!-- Importando o estilo home -->
+    <link rel="stylesheet" href="../styles/home.css">
+    <!-- Importando a fonte personalizada -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+    </style>
+  </head>
+
+  <body class="zalando-sans-expanded-font">
+    <!-- Conteúdo do Header -->
+    <header>
+        <!-- Link para página inicial -->
+        <h1><a href="./home.html">A 6ª Geração de Consoles</a></h1>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+      <!-- Seção principal do conteúdo -->
+      <section class="sections">
+        <h2>O que foi? O que representou?</h2>
+        <p class="main-text">
+            A 6ª geração de consoles de videogame, também chamada de era dos 128
+            bits, foi um dos períodos mais importantes da história dos games. Ela
+            marcou a transição para os gráficos totalmente 3D, popularizou o jogo
+            online nos consoles e introduziu recursos multimídia que aproximaram os
+            videogames de centros de entretenimento completos. Essa geração durou
+            aproximadamente de 1998 a 2013, dependendo da região e do console.
+        </p>
+
+        <h2>Quem foram os protagonistas da geração?</h2>
+        <p>Estão entre os participantes:</p>
+        <ul class="lists">
+            <!-- Links para os consoles -->
+            <li class="main-text">Playstation: <a id="psColor" href="./sony.html">Playstation 2</a></li>
+            <li class="main-text">Nintendo: <a id="nintendoColor" href="./nintendo.html">Nintendo GameCube</a></li>
+            <li class="main-text">Microsoft: <a id="xboxColor" href="./xbox.html">Microsoft Xbox</a></li>
+            <li class="main-text">Sega: <a id="segaColor" href="./sega.html">Sega Dreamcast</a></li>
+        </ul>
+
+        <section id="video-box">
+          <!-- Vídeo humorístico, com autoplay e mutado em looping -->
+          <video id="video" autoplay muted loop>
+            <source src="../images/video/followthetraincj.mp4" type="video/mp4">
+          </video>
+
+          <!-- Campo em que o código secreto inserido pelo usuário aparece -->
+          <h3 id="secret-text"></h3>
+        </section>
+      </section>
+
+      <!-- Conteúdo lateral -->
+      <aside class="sections">
+        <!-- Importando imagens do console -->
+        <figure id="image-box">
+          <img class="images" src="../images/9k2giodgxbm31.webp" alt="Consoles da geração">
+        </figure>
+      </aside>
+    </main>
+
+    <!-- Conteúdo do rodapé -->
+    <footer>
+        <!-- Dados pessoais -->
+        <h3>Desenvolvido por: Willian Kronhardt Boita</h3>
+        <h4>Contato:</h4>
+        <ul class="footer-list">
+            <li>E-mail: <p>wkboita@gmail.com</p></li>
+            <li>Matrícula: <p>20250020260</p></li>
+            <li>Linkedin: <a target="_blank" href="https://www.linkedin.com/in/Willian-Kronhardt-Boita/">Willian Kronhardt Boita</a></li>
+            <li>GitHub: <a target="_blank" href="https://github.com/WillianBoita">Willian Boita</a></li>
+        </ul>
+    </footer>
+
+    <script>
+      // Códigos secretos
+      const codigoVideo = 'JUMPJET'; // Comando que spawna um avião no GTA San Andreas
+      const codigoPS = 'PS2';
+      const codigoXbox = 'XBOX';
+      const codigoNintendo = 'NINTENDO';
+      const codigoSega = 'SEGA';
+
+      // Verificando se o vídeo/áudio ainda está tocando
+      let tocando = false
+
+      // Pegando o vídeo e o campo do código pelo DOM
+      const video = document.getElementById("video");
+      const displayCodigo = document.getElementById("secret-text");
+
+      document.addEventListener('keydown', e => {
+        // Previnindo recarregamento da página
+        e.preventDefault();
+
+        // Se um evento ainda está tocando, não realiza nenhum evento
+        if(tocando === true){
+          return;
+        }
+
+        // Pegando input do teclado e colocando em caixa alta
+        const tecla = e.key.toUpperCase();
+        displayCodigo.textContent += tecla;
+
+        // Se o código for JUMPJET
+        if(displayCodigo.textContent === codigoVideo){
+          // Altera o vídeo
+          video.src = "../images/video/luanAviao.mp4";
+
+          // Habilta o som
+          video.muted = false;
+
+          // Desabilita o loop
+          video.loop = false;
+
+          // Dá play no vídeo
+          video.play();
+
+          // Confirma que o vídeo está tocando
+          tocando = true
+
+          // Quando o vídeo acabar
+          video.onended = () => {
+            // Altera para o gif original
+            video.src = "../images/video/followthetraincj.mp4";
+            // Zera o input do código
+            displayCodigo.textContent = '';
+            // Informa que o vídeo não está tocando
+            tocando = false
+          }
+        }
+
+        // Se o código for PS2
+        if(displayCodigo.textContent === codigoPS){
+          // Toca o áudio do ps2
+          const audio = new Audio("../images/audio/PS2 Startup Screen - QuickSounds.com.mp3");
+          audio.play();
+          // Confirma que o áudio está tocando
+          tocando = true
+
+          // Quando o aúdio acabar
+          audio.onended = () => {
+            // Zera o input do código
+            displayCodigo.textContent = '';
+            // Informa que o áudio não está tocando
+            tocando = false
+          }
+
+        }
+
+        // Se o código for Xbox
+        if(displayCodigo.textContent === codigoXbox){
+          // Toca o áudio do Xbox
+          const audio = new Audio("../images/audio/xbox-2001-startup.mp3");
+          audio.play();
+          // Confirma que o áudio está tocando
+          tocando = true
+
+          // Quando o aúdio acabar
+          audio.onended = () => {
+            // Zera o input do código
+            displayCodigo.textContent = '';
+            // Informa que o áudio não está tocando
+            tocando = false
+          }
+
+        }
+
+        // Se o código for Xbox
+        if(displayCodigo.textContent === codigoNintendo){
+          // Toca o áudio do Xbox
+          const audio = new Audio("../images/audio/gamecube-startup.mp3");
+          audio.play();
+          // Confirma que o áudio está tocando
+          tocando = true
+
+          // Quando o aúdio acabar
+          audio.onended = () => {
+            // Zera o input do código
+            displayCodigo.textContent = '';
+            // Informa que o áudio não está tocando
+            tocando = false
+          }
+
+        }
+
+        // Se o código for Xbox
+        if(displayCodigo.textContent === codigoSega){
+          // Toca o áudio do Xbox
+          const audio = new Audio("../images/audio/dreamcast_startup.mp3");
+          audio.play();
+          // Confirma que o áudio está tocando
+          tocando = true
+
+          // Quando o aúdio acabar
+          audio.onended = () => {
+            // Zera o input do código
+            displayCodigo.textContent = '';
+            // Informa que o áudio não está tocando
+            tocando = false
+          }
+        }
+
+        // Se o código passar de 7 dígitos, zera
+        if(displayCodigo.textContent.length >= 7){
+          displayCodigo.textContent = '';
+        }
+      })
+    </script>
+  </body>
+</html>

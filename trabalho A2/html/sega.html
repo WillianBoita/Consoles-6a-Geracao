@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sega Dreamcast</title>
+    <!-- Importando o estilo sega -->
+    <link rel="stylesheet" href="../styles/sega.css">
+    <!-- Importando a fonte personalizada -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+    </style>
+  </head>
+
+  <body class="zalando-sans-expanded-font" >
+    <!-- Conteúdo do Header -->
+    <header>
+        <!-- Link para página inicial -->
+        <h1><a href="./home.html" >A 6ª Geração de Consoles</a></h1>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Seção principal do conteúdo -->
+        <section class="sections">
+            <h1>Sega Dreamcast</h1>
+            <!-- Imagem do Dreamcast -->
+            <figure id="console-box" >
+                <img id="console-images" src="../images/sega/Dreamcast-Console-Set.png" alt="Dreamcast">
+            </figure>
+
+            <h2>O que é o Dreamcast?</h2>
+            <p class="main-content">
+                O Sega Dreamcast foi o último console da Sega e o primeiro da 6ª geração de videogames. 
+                Ele foi lançado em 1998 no Japão e trouxe várias inovações à frente do seu tempo, 
+                mas infelizmente teve vida curta. Vendeu apenas 9,1 milhões de unidades.
+            </p>
+
+            <!-- Tabela com as datas de lançamento do console -->
+            <h2>Datas de lançamento:</h2>
+            <table class="main-content" border="1" cellspacing="0">
+                <tr class="table-content">
+                    <th>Japão</th>
+                    <th>Estados Unidos</th>
+                    <th>Europa</th>
+                    <th>Brasil</th>
+                </tr>
+                <tr class="table-content">
+                    <td>27 de novembro de 1998</td>
+                    <td>9 de setembro de 1999</td>
+                    <td>14 de outubro de 1999</td>
+                    <td>Nunca lançado oficialmente pela Sega (apenas importado por distribuidores paralelos)</td>
+                </tr>
+            </table>
+
+            <!-- Lista não ordenada com as informações do hardware -->
+            <h2>Hardware:</h2>
+            <ul class="lists">
+                <li><p><strong>CPU</strong> - Hitachi SH-4, 200 MHz (32-bit RISC)</p></li>
+                <li><p><strong>GPU</strong> - PowerVR2 CLX2, 100 MHz (gráficos de alta qualidade para 1998)</p></li>
+                <li><p><strong>RAM</strong> - 16 MB principal + 8 MB de vídeo + 2 MB de som</p></li>
+                <li><p><strong>Som</strong> - 64 canais de áudio, qualidade muito superior aos 32 bits</p></li>
+                <li><p><strong>Mídia</strong> - GD-ROM (1,2 GB) – discos proprietários</p></li>
+                <li><p><strong>Armazenamento</strong> - Memory Cards (59, 251 ou 1019 blocos)</p></li>
+                <li><p><strong>Conectividade</strong> - Modem de 56k embutido (alguns modelos com modem de 33k)</p></li>
+                <li><p><strong>Resolução de Vídeo</strong> - 480i padrão, suporte a 480p com cabo VGA</p></li>
+                <li><p><strong>Controle</strong> - 	Controle com slot para memory card e acessórios (como a VMU)</p></li>
+            </ul>
+
+            <!-- Lista não ordenada com as inovações do console -->
+            <h2>Inovações:</h2>
+            <ul class="lists">
+                <li><p><strong>Jogo Online Integrado</strong> - Primeiro console com modem embutido, 
+                    permitindo jogar online diretamente. Phantasy Star Online foi o primeiro RPG online de consoles. 
+                    Também suportava chat e downloads de conteúdo.</p></li>
+                <li><p><strong>VMU (Visual Memory Unit)</strong> - Um memory card com tela LCD própria, 
+                    que podia exibir informações extras do jogo ou até rodar minigames de forma independente.</p></li>
+                <li><p><strong>Gráficos Avançados</strong> - No lançamento, 
+                    tinha os gráficos mais impressionantes de qualquer console doméstico, próximo de arcades da época.</p></li>
+                <li><p><strong>Biblioteca Criativa</strong> - Muitos jogos apostaram em novas ideias e estilos, 
+                    como cel-shading (Jet Set Radio) e mundos abertos (Shenmue).</p></li>
+            </ul>
+        </section>
+        
+        <!-- Conteúdo lateral -->
+        <aside class="sections">
+            <h2>Os 3 jogos mais vendidos:</h2>
+            <!-- Lista ordenada dos jogos mais vendidos -->
+            <ol>
+                <li><p id="game-top1">Sonic Adventure - 2,5 milhões de cópias</p></li>
+                <li><p id="game-top2">SoulCalibur - 1,3 milhão de cópias</p></li>
+                <li><p id="game-top3">Crazy Taxi - 1,2 milhão de cópias</p></li>
+            </ol>
+
+            <!-- Botão que alterna entre as capas dos 3 jogos -->
+            <button type="submit" id="switch-game-button">Trocar capa</button>
+
+            <!-- Capa do jogo -->
+            <figure id="game-box">
+                <img hidden id="game-img" src="../images/sega/crazytaxi.jpeg" alt="Capa">
+            </figure>
+
+            <!-- Curiosidade -->
+            <p><i id="fact-text"><strong>Curiosidade:</strong> o Dreamcast podia rodar jogos a 480p via cabo VGA — 
+                algo que só seria padrão na geração seguinte.</i></p>
+        </aside>
+    </main>
+
+    <!-- Conteúdo do rodapé -->
+    <footer>
+        <!-- Dados pessoais -->
+        <h3>Desenvolvido por: Willian Kronhardt Boita</h3>
+        <h4>Contato:</h4>
+        <ul class="footer-list">
+            <li>E-mail:<p> wkboita@gmail.com</p></li>
+            <li>Matrícula:<p> 20250020260</p></li>
+            <li>Linkedin: <a target="_blank" href="https://www.linkedin.com/in/Willian-Kronhardt-Boita/">Willian Kronhardt Boita</a></li>
+            <li>GitHub: <a target="_blank" href="https://github.com/WillianBoita">Willian Boita</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // declarando os textos e imagens dos jogos
+        const gameImg = document.getElementById("game-img");
+        const gameText1 = document.getElementById("game-top1");
+        const gameText2 = document.getElementById("game-top2");
+        const gameText3 = document.getElementById("game-top3");
+
+        // ativando o addeventlistener
+        const button = document.getElementById("switch-game-button").addEventListener('click', e => {
+            // impedir que a página recarregue
+            e.preventDefault();
+
+            // mostrando capa do jogo
+            gameImg.hidden = false
+
+            //alternando a capa do jogo e o peso da fonte a cada clique
+            if (gameImg.src.includes("crazytaxi.jpeg")){
+                gameImg.src = "../images/sega/sonicadventure.webp"
+                gameText3.style.fontWeight = "normal"
+                gameText1.style.fontWeight = "bold"
+            } else if (gameImg.src.includes("sonicadventure.webp")) {
+                gameImg.src = "../images/sega/soulcalibur.jpeg"
+                gameText1.style.fontWeight = "normal"
+                gameText2.style.fontWeight = "bold"
+            } else {
+                gameImg.src = "../images/sega/crazytaxi.jpeg"
+                gameText2.style.fontWeight = "normal"
+                gameText3.style.fontWeight = "bold"
+            }
+        })
+    </script>
+
+  </body>
+</html>

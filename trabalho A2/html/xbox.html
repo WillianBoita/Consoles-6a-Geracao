@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Microsoft Xbox</title>
+    <!-- Importando o estilo xbox -->
+    <link rel="stylesheet" href="../styles/xbox.css">
+    <!-- Importando a fonte personalizada -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+    </style>
+  </head>
+
+  <body class="zalando-sans-expanded-font">
+    <!-- Conteúdo do Header -->
+    <header>
+        <!-- Link para página inicial -->
+        <h1><a href="./home.html" >A 6ª Geração de Consoles</a></h1>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Seção principal do conteúdo -->
+        <section class="sections">
+            <h1>Microsoft Xbox</h1>
+            <!-- Imagem do Playstation -->
+            <figure id="console-box">
+                <img id="console-images" src="../images/xbox/Xbox-Console-Set.png" alt="Xbox Original">
+            </figure>
+
+            <h2>O que é o Xbox?</h2>
+            <p class="main-content">
+                O Xbox original foi o primeiro console da Microsoft, lançado em 2001, 
+                e marcou a entrada da empresa no mercado de videogames. 
+                Ele foi um dos grandes concorrentes do PS2 e trouxe muitas inovações que moldaram o futuro dos consoles — 
+                principalmente no jogo online. Ele vendeu 24 milhões de unidades.
+            </p>
+
+            <!-- Tabela com as datas de lançamento do console -->
+            <h2>Datas de lançamento:</h2>
+            <table class="main-content" border="1" cellspacing="0">
+                <tr class="table-content">
+                    <th>Japão</th>
+                    <th>Estados Unidos</th>
+                    <th>Europa</th>
+                    <th>Brasil</th>
+                </tr>
+                <tr class="table-content">
+                    <td>22 de fevereiro de 2002</td>
+                    <td>15 de novembro de 2001</td>
+                    <td>14 de março de 2002</td>
+                    <td>Oficialmente em 2003 (importado antes por lojas paralelas)</td>
+                </tr>
+            </table>
+
+            <!-- Lista não ordenada com as informações do hardware -->
+            <h2>Hardware:</h2>
+            <ul class="lists">
+                <li><p><strong>CPU</strong> - Intel Pentium III Custom – 733 MHz</p></li>
+                <li><p><strong>GPU</strong> - Nvidia NV2A (baseada na GeForce 3), 233 MHz</p></li>
+                <li><p><strong>RAM</strong> - 64 MB DDR</p></li>
+                <li><p><strong>Som</strong> - Áudio surround Dolby Digital 5.1 em tempo real</p></li>
+                <li><p><strong>Mídia</strong> - DVD-ROM (suporte a CDs e DVDs)</p></li>
+                <li><p><strong>Armazenamento</strong> - HD interno de 8 ou 10 GB (inédito em consoles na época)</p></li>
+                <li><p><strong>Conectividade</strong> - Porta Ethernet 10/100 Mbps integrada (sem precisar de acessórios)</p></li>
+                <li><p><strong>Resolução de Vídeo</strong> - 480p padrão, suporte a 720p e 1080i em alguns jogos</p></li>
+                <li><p><strong>Controle</strong> - Controle "Duke" (grande), substituído depois pelo menor "Controller S"</p></li>
+            </ul>
+
+            <!-- Lista não ordenada com as inovações do console -->
+            <h2>Inovações:</h2>
+            <ul class="lists">
+                <li><p><strong>HD Interno</strong> - Primeiro console com disco rígido embutido, 
+                    eliminando a necessidade de memory cards para salvar jogos.</p></li>
+                <li><p><strong>Xbox Live</strong> - Lançado em 2002, foi o primeiro serviço online robusto para consoles, 
+                    Permitindo: Lista de amigos, chat de voz integrado, e partidas multiplayer estáveis. 
+                    Jogos como Halo 2 fizeram enorme sucesso no modo online.</p></li>
+                <li><p><strong>Poder Gráfico</strong> - Era o console mais potente da geração, 
+                    com gráficos comparáveis ou superiores aos do PC da época. 
+                    Alguns jogos rodavam em 720p ou 1080i, algo raro no PS2 ou GameCube.</p></li>
+                <li><p><strong>Áudio Imersivo</strong> - Suporte nativo a Dolby Digital 5.1, oferecendo som surround real em tempo real.</p></li>
+            </ul>
+        </section>
+        
+        <!-- Conteúdo lateral -->
+        <aside class="sections">
+            <h2>Os 3 jogos mais vendidos:</h2>
+            <!-- Lista ordenada dos jogos mais vendidos -->
+            <ol>
+                <li><p id="game-top1">Halo 2 - 8,46 milhões de cópias</p></li>
+                <li><p id="game-top2">Halo: Combat Evolved - 5 milhões de cópias</p></li>
+                <li><p id="game-top3">Fable - 3 milhões de cópias</p></li>
+            </ol>
+
+            <!-- Botão que alterna entre as capas dos 3 jogos -->
+            <button type="submit" id="switch-game-button">Trocar capa</button>
+
+            <!-- Capa do jogo -->
+            <figure id="game-box">
+                <img hidden id="game-img" src="../images/xbox/fable.jpeg" alt="Capa">
+            </figure>
+
+            <!-- Curiosidade -->
+            <p><i id="fact-text"><strong>Curiosidade:</strong> O Xbox era, na prática, um PC “compacto”, rodando um sistema operacional baseado no Windows 2000, 
+                o que facilitou o desenvolvimento de jogos. </i></p>
+        </aside>
+    </main>
+
+    <!-- Conteúdo do rodapé -->
+    <footer>
+        <!-- Dados pessoais -->
+        <h3>Desenvolvido por: Willian Kronhardt Boita</h3>
+        <h4>Contato:</h4>
+        <ul class="footer-list">
+            <li>E-mail:<p> wkboita@gmail.com</p></li>
+            <li>Matrícula:<p> 20250020260</p></li>
+            <li>Linkedin: <a target="_blank" href="https://www.linkedin.com/in/Willian-Kronhardt-Boita/">Willian Kronhardt Boita</a></li>
+            <li>GitHub: <a target="_blank" href="https://github.com/WillianBoita">Willian Boita</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // declarando os textos e imagens dos jogos
+        const gameImg = document.getElementById("game-img");
+        const gameText1 = document.getElementById("game-top1");
+        const gameText2 = document.getElementById("game-top2");
+        const gameText3 = document.getElementById("game-top3");
+
+        // ativando o addeventlistener
+        const button = document.getElementById("switch-game-button").addEventListener('click', e => {
+            // impedir que a página recarregue
+            e.preventDefault();
+
+            // mostrando capa do jogo
+            gameImg.hidden = false
+
+            //alternando a capa do jogo e o peso da fonte a cada clique
+            if (gameImg.src.includes("fable.jpeg")){
+                gameImg.src = "../images/xbox/Halo_2_box_art.webp"
+                gameText3.style.fontWeight = "normal"
+                gameText1.style.fontWeight = "bold"
+            } else if (gameImg.src.includes("Halo_2_box_art.webp")) {
+                gameImg.src = "../images/xbox/haloevolved.jpeg"
+                gameText1.style.fontWeight = "normal"
+                gameText2.style.fontWeight = "bold"
+            } else {
+                gameImg.src = "../images/xbox/fable.jpeg"
+                gameText2.style.fontWeight = "normal"
+                gameText3.style.fontWeight = "bold"
+            }
+        })
+    </script>
+
+  </body>
+</html>

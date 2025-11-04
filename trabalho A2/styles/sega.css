@@ -1,0 +1,18 @@
+@import url("consoles.css"); /* importando o css dos consoles */
+
+/* Adicionando cores do Dreamcast */
+header a, .sections h1, .sections h2, .sections strong, .sections p, .sections ol li, td, th, .lists strong, #fact-text{
+    color: #FF6600
+}
+
+body {
+    background-color: #f4f4f4
+}
+
+.sections {
+    background-color: #B8B8B8
+}
+
+footer {
+    color: #F5F5F5;
+}

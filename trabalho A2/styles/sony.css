@@ -1,0 +1,23 @@
+@import url("consoles.css"); /* importando o css dos consoles */
+
+/* Adicionando cores do Playstation */
+header a, .sections h1, .sections h2, .sections strong, .sections p, .sections ol li, td, th, .lists strong, #fact-text{
+    color: #0A7AFF;
+}
+
+body {
+    background-color: #003366;
+}
+
+.sections {
+    background-color: #1A1A1A;
+}
+
+#switch-game-button {
+    color: #1A1A1A;
+    background-color: #0A7AFF;
+}
+
+footer {
+    color: #F5F5F5;
+}

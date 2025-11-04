@@ -1,0 +1,146 @@
+/* Remove margens e espaçamentos padrão, e define cor de texto padrão */
+* {
+    margin: 0;
+    padding: 0;
+    color: #7A7A7A;
+} 
+
+/* Define a fonte personalizada usada no site */
+.zalando-sans-expanded-font {
+    font-family: "Zalando Sans Expanded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: normal;
+}
+
+/* Organiza o site em colunas, define fundo cinza-claro e oculta barra de rolagem */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #eaeaea;
+    overflow-x: hidden;
+}
+
+/* Espaçamento interno no cabeçalho */
+header {
+    padding: 8px;
+}
+
+/* Define cor dos links no header */
+header a {
+    color: #7A7A7A;
+}
+
+/* Muda a cor dos links ao passar o mouse (verde) */
+header a:hover {
+    color: #75c448;
+}
+
+/* Deixa o conteúdo principal lado a lado e com espaçamento interno */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+/* Remove sublinhado de todos os links */
+a {
+    text-decoration: none;
+}
+
+/* Define margens e espaçamento padrão para textos principais */
+.main-text {
+    margin: 4px 0px;
+    padding: 4px 0px;
+}
+
+/* Remove os detalhes das listas */
+.lists {
+    list-style-type: none;
+}
+
+/* Dá cor de fundo, cantos arredondados e espaçamento para as seções */
+.sections {
+    background-color: #bababa;
+    border-radius: 8px;
+    padding: 8px;
+    margin-left: 8px;
+}
+
+/* Define tamanho, borda e bordas arredondadas para as imagens */
+.images {
+    border-radius: 8px;
+    height: auto;
+    width: 500px;
+    border: 1px solid black;
+}
+
+/* Centraliza a imagem */
+#image-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Define cor azul para textos relacionados ao PlayStation */
+#psColor {
+    color: #0A7AFF;
+}
+
+/* Define verde para textos do Xbox */
+#xboxColor {
+    color: #578300;
+}
+
+/* Define roxo para textos do Nintendo */
+#nintendoColor {
+    color: #4B0082;
+}
+
+/* Define laranja para textos do Sega */
+#segaColor {
+    color: #FF6600;
+}
+
+/* Define tamanho do vídeo */
+#video {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Organiza a área do vídeo */
+#video-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 24px 0;
+    height: 500px;
+    width: 80%;
+}
+
+/* Dá espaçamento lateral pro texto que mostra os códigos digitados */
+#secret-text {
+    margin-left: 32px;
+}
+
+/* Define fundo escuro e texto claro no rodapé */
+footer {
+    background-color: #494949;
+    color: #F5F5F5;
+    width: 100%;
+    padding: 8px; 
+}
+
+/* Organiza os itens da lista do rodapé lado a lado e com espaçamento */
+footer li {
+    display: flex;
+    padding: 2px;
+}
+
+/* Define cor laranja para links e textos do rodapé */
+footer a, footer li p {
+    color: #FF6600;
+    margin-left: 2px;
+}

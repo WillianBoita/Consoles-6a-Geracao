@@ -1,0 +1,18 @@
+@import url("consoles.css"); /* importando o css dos consoles */
+
+/* Adicionando cores do Gamecube */
+header a, .sections h1, .sections h2, .sections strong, .sections p, .sections ol li, td, th, .lists strong, #fact-text{
+    color: #58D68D
+}
+
+body {
+    background-color: #4B0082;
+}
+
+.sections {
+    background-color: #333333
+}
+
+footer {
+    color: #F5F5F5;
+}

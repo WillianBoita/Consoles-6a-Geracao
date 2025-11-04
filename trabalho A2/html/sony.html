@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sony Playstation 2</title>
+    <!-- Importando o estilo playstation -->
+    <link rel="stylesheet" href="../styles/sony.css">
+    <!-- Importando a fonte personalizada -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+    </style>
+  </head>
+
+  <body class="zalando-sans-expanded-font">
+    <!-- Conteúdo do Header -->
+    <header>
+        <!-- Link para página inicial -->
+        <h1><a href="./home.html" >A 6ª Geração de Consoles</a></h1>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Seção principal do conteúdo -->
+        <section class="sections">
+            <h1>Sony Playstation 2</h1>
+            <!-- Imagem do Playstation -->
+            <figure id="console-box">
+                <img id="console-images" src="../images/playstation/PS2-Versions.png" alt="PlayStation 2" height="100px" width="150px">
+            </figure>
+
+            <h2>O que é o Playstation 2?</h2>
+            <p class="main-content">
+                O PlayStation 2 (PS2) foi o segundo console de videogame da Sony, lançado em 2000, 
+                e é considerado um dos videogames mais importantes e influentes da história. 
+                Sendo o console mais vendido de todos os tempos (com mais de 155 milhões de unidades), 
+                ele transformou a forma como os videogames eram vistos – passando a ser um centro de entretenimento doméstico, 
+                graças ao seu suporte a DVDs.
+            </p>
+
+            <!-- Tabela com as datas de lançamento do console -->
+            <h2>Datas de lançamento:</h2>
+            <table class="main-content" border="1" cellspacing="0">
+                <tr class="table-content">
+                    <th>Japão</th>
+                    <th>Estados Unidos</th>
+                    <th>Europa</th>
+                    <th>Brasil</th>
+                </tr>
+                <tr class="table-content">
+                    <td>4 de março de 2000</td>
+                    <td>26 de outubro de 2000</td>
+                    <td>24 de novembro de 2000</td>
+                    <td>2009 (oficialmente, pela Sony)</td>
+                </tr>
+            </table>
+
+            <!-- Lista não ordenada com as informações do hardware -->
+            <h2>Hardware:</h2>
+            <ul class="lists">
+                <li><p><strong>CPU</strong> - Emotion Engine – processador MIPS R5900 (128 bits), 294 MHz</p></li>
+                <li><p><strong>GPU</strong> - Graphics Synthesizer, clock de 147 MHz, 
+                    capaz de processar 75 milhões de polígonos por segundo (teórico)</p></li>
+                <li><p><strong>RAM</strong> - 32 MB RDRAM</p></li>
+                <li><p><strong>Som</strong> - Processador de áudio com suporte a até 48 canais simultâneos</p></li>
+                <li><p><strong>Mídia</strong> - DVD-ROM (4,7 GB por disco), compatível com CD-ROM</p></li>
+                <li><p><strong>Armazenamento</strong> - Memory Card de 8 MB (oficial); 
+                    suporte a HD externo de 40 GB (via adaptador de rede)</p></li>
+                <li><p><strong>Conectividade</strong> - Porta USB, porta FireWire (em alguns modelos), 
+                    entrada para adaptador de rede (Ethernet ou modem)</p></li>
+                <li><p><strong>Resolução de Vídeo</strong> - 240p, 480i, 480p e alguns jogos raros em 720p ou 1080i</p></li>
+                <li><p><strong>Controle</strong> - DualShock 2 – evolução do DualShock original, 
+                    com sensibilidade analógica em botões e gatilhos</p></li>
+            </ul>
+
+            <!-- Lista não ordenada com as inovações do console -->
+            <h2>Inovações:</h2>
+            <ul class="lists">
+                <li><p><strong>Leitor de DVD Integrado</strong> - Foi um dos primeiros aparelhos acessíveis que rodavam DVDs.</p></li>
+                <li><p><strong>Compatibilidade com PS1</strong> - Jogava praticamente toda a biblioteca do PS1, 
+                    com suporte aos memory cards e controles antigos.</p></li>
+                <li><p><strong>Controle Avançado (DualShock 2)</strong> - Manteve o design clássico, mas com botões analógicos sensíveis à pressão.</p></li>
+                <li><p><strong>Suporte a Jogo Online</strong> - Embora com o online não tão robusto, 
+                    o PS2 com o adaptador de rede permitia jogar títulos como SOCOM: U.S. Navy SEALs e Final Fantasy XI online.</p></li>
+                <li><p><strong>Expansibilidade</strong> - Possibilidade de instalar um HD interno para salvar jogos, 
+                    armazenar dados e rodar conteúdo extra.</p></li>
+                <li><p><strong>Maior Capacidade Gráfica</strong> - Permitiu jogos com mundos abertos muito maiores que no PS1 (GTA III, San Andreas). 
+                    Introduziu gráficos 3D mais detalhados, animações melhores e efeitos de luz mais realistas.</p></li>
+            </ul>
+        </section>
+
+        <!-- Conteúdo lateral -->
+        <aside class="sections">
+            <h2>Os 3 jogos mais vendidos:</h2>
+            <!-- Lista ordenada dos jogos mais vendidos -->
+            <ol>
+                <li><p id="game-top1">Grand Theft Auto: San Andreas - 17,3 milhões de cópias</p></li>
+                <li><p id="game-top2">Gran Turismo 3: A-Spec - 14,9 milhões de cópias</p></li>
+                <li><p id="game-top3">Gran Turismo 4 - 11,8 milhões de cópias</p></li>
+            </ol>
+
+            <!-- Botão que alterna entre as capas dos 3 jogos -->
+            <button type="submit" id="switch-game-button">Trocar capa</button>
+
+            <!-- Capa do jogo -->
+            <figure id="game-box">
+                <img hidden id="game-img" src="../images/playstation/granturismo4.png" alt="Capa">
+            </figure>
+
+            <!-- Curiosidade -->
+            <p><i id="fact-text"><strong>Curiosidade:</strong> O PS2 foi um dos principais responsáveis pela popularização do DVD no mundo. 
+                Quando foi lançado em 2000, leitores de DVD eram caros. 
+                Comprar um PS2 era mais barato do que comprar um player de DVD dedicado, 
+                e ele ainda vinha com a vantagem de rodar jogos. 
+                Muita gente comprou o PS2 primeiro para assistir filmes em DVD e depois para jogar — 
+                isso ajudou enormemente nas vendas iniciais do console 
+                e é uma das razões pelas quais ele se tornou o console mais vendido da história.
+                </i>
+            </p>
+        </aside>
+    </main>
+
+    <!-- Conteúdo do rodapé -->
+    <footer>
+        <!-- Dados pessoais -->
+        <h3>Desenvolvido por: Willian Kronhardt Boita</h3>
+        <h4>Contato:</h4>
+        <ul class="footer-list">
+            <li>E-mail:<p> wkboita@gmail.com</p></li>
+            <li>Matrícula:<p> 20250020260</p></li>
+            <li>Linkedin: <a target="_blank" href="https://www.linkedin.com/in/Willian-Kronhardt-Boita/">Willian Kronhardt Boita</a></li>
+            <li>GitHub: <a target="_blank" href="https://github.com/WillianBoita">Willian Boita</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // declarando os textos e imagens dos jogos
+        const gameImg = document.getElementById("game-img");
+        const gameText1 = document.getElementById("game-top1");
+        const gameText2 = document.getElementById("game-top2");
+        const gameText3 = document.getElementById("game-top3");
+
+        // ativando o addeventlistener
+        const button = document.getElementById("switch-game-button").addEventListener('click', e => {
+            // impedir que a página recarregue
+            e.preventDefault();
+
+            // mostrando capa do jogo
+            gameImg.hidden = false
+
+            //alternando a capa do jogo e o peso da fonte a cada clique
+            if (gameImg.src.includes("granturismo4.png")){
+                gameImg.src = "../images/playstation/gtasanandreas.jpeg"
+                gameText3.style.fontWeight = "normal"
+                gameText1.style.fontWeight = "bold"
+            } else if (gameImg.src.includes("gtasanandreas.jpeg")) {
+                gameImg.src = "../images/playstation/granturismo3.jpeg"
+                gameText1.style.fontWeight = "normal"
+                gameText2.style.fontWeight = "bold"
+            } else {
+                gameImg.src = "../images/playstation/granturismo4.png"
+                gameText2.style.fontWeight = "normal"
+                gameText3.style.fontWeight = "bold"
+            }
+        })
+    </script>
+  </body>
+</html>

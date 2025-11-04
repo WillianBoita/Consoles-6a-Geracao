@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nintendo GameCube</title>
+    <!-- Importando o estilo nintendo -->
+    <link rel="stylesheet" href="../styles/nintendo.css">
+    <!-- Importando a fonte personalizada -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+    </style>
+  </head>
+
+  <body class="zalando-sans-expanded-font">
+    <!-- Conteúdo do Header -->
+    <header>
+        <!-- Link para página inicial -->
+        <h1><a href="./home.html">A 6ª Geração de Consoles</a></h1>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Seção principal do conteúdo -->
+        <section class="sections">
+            <h1>Nintendo GameCube</h1>
+            <!-- Imagem do GameCube -->
+            <figure id="console-box">
+                <img id="console-images" src="../images/nintendo/GameCube-Console-Set.png" alt="Nintendo Gamecube">
+            </figure>
+
+            <h2>O que é o GameCube?</h2>
+            <p class="main-content">
+                O Nintendo GameCube foi o console da Nintendo para a 6ª geração, lançado em 2001, 
+                e marcou uma grande mudança para a empresa – 
+                foi seu primeiro videogame a usar mídia óptica (discos) ao invés de cartuchos. 
+                Apesar de vender menos que PS2 e Xbox, 
+                o GameCube é lembrado com muito carinho por sua biblioteca de jogos cult e seu design único. 
+                Ele vendeu um total de 21,7 milhões de unidades.
+            </p>
+
+            <!-- Tabela com as datas de lançamento do console -->
+            <h2>Datas de lançamento:</h2>
+            <table class="main-content" border="1" cellspacing="0">
+                <tr class="table-content">
+                    <th>Japão</th>
+                    <th>Estados Unidos</th>
+                    <th>Europa</th>
+                    <th>Brasil</th>
+                </tr>
+                <tr class="table-content">
+                    <td>14 de setembro de 2001</td>
+                    <td>18 de novembro de 2001</td>
+                    <td>3 de maio de 2002</td>
+                    <td>Nunca lançado oficialmente pela Nintendo (apenas importado por distribuidores paralelos)</td>
+                </tr>
+            </table>
+
+            <!-- Lista não ordenada com as informações do hardware -->
+            <h2>Hardware:</h2>
+            <ul class="lists">
+                <li><p><strong>CPU</strong> - IBM PowerPC “Gekko” – 485 MHz</p></li>
+                <li><p><strong>GPU</strong> - ATI “Flipper” – 162 MHz</p></li>
+                <li><p><strong>RAM</strong> - 24 MB de 1T-SRAM + 16 MB DRAM auxiliar</p></li>
+                <li><p><strong>Som</strong> - Áudio surround Dolby Pro Logic II</p></li>
+                <li><p><strong>Mídia</strong> - MiniDVDs de 8 cm (1,5 GB por disco)</p></li>
+                <li><p><strong>Armazenamento</strong> - Memory Cards (59, 251 ou 1019 blocos)</p></li>
+                <li><p><strong>Conectividade</strong> - Portas para até 4 controles; opcionais como adaptador de banda larga ou modem</p></li>
+                <li><p><strong>Resolução de Vídeo</strong> - 480i padrão, 480p progressivo via cabo componente (em jogos compatíveis)</p></li>
+                <li><p><strong>Controle</strong> - 	Um dos mais elogiados da história, ergonômico e ideal para jogos 3D</p></li>
+            </ul>
+            
+            <!-- Lista não ordenada com as inovações do console -->
+            <h2>Inovações:</h2>
+            <ul class="lists">
+                <li><p><strong>MiniDVDs</strong> - Menor tempo de loading que os DVDs do PS2.</p></li>
+                <li><p><strong>Controle icônico</strong> - Layout ergonômico, com botão A centralizado e gatilhos analógicos. 
+                    Até hoje é usado em competições de Super Smash Bros.</p></li>
+                <li><p><strong>Foco em multiplayer local</strong> - 4 entradas para controles nativamente, 
+                    ideal para jogos de festa.</p></li>
+                <li><p><strong>Qualidade gráfica</strong> - Excelente performance para a época, com cores vivas e ótima performance em 480p.</p></li>
+            </ul>
+        </section>
+        
+        <!-- Conteúdo lateral -->
+        <aside class="sections">
+            <h2>Os 3 jogos mais vendidos:</h2>
+            <!-- Lista ordenada dos jogos mais vendidos -->
+            <ol>
+                <li><p id="game-top1">Super Smash Bros. Melee (2001) - 7,41 milhões de cópias</p></li>
+                <li><p id="game-top2">Mario Kart: Double Dash!! - 6,96 milhões de cópias</p></li>
+                <li><p id="game-top3">Super Mario Sunshine - 6,28 milhões de cópias</p></li>
+            </ol>
+
+            <!-- Botão que alterna entre as capas dos 3 jogos -->
+            <button type="submit" id="switch-game-button">Trocar capa</button>
+
+            <!-- Capa do jogo -->
+            <figure id="game-box">
+                <img hidden id="game-img" src="../images/nintendo/supermariosunshine.jpeg" alt="Capa">
+            </figure>
+
+            <!-- Curiosidade -->
+            <p><i id="fact-text"><strong>Curiosidade:</strong> O GameCube tinha um acessório oficial chamado Game Boy Player, 
+                que se conectava na parte de baixo do console e permitia jogar qualquer jogo de Game Boy, 
+                Game Boy Color e Game Boy Advance na TV usando o controle do GameCube.
+                Era como transformar o GameCube em um “super Game Boy” de tela grande, algo muito amado por colecionadores até hoje. </i></p>
+        </aside>
+    </main>
+
+    <!-- Conteúdo do rodapé -->
+    <footer>
+        <!-- Dados pessoais -->
+        <h3>Desenvolvido por: Willian Kronhardt Boita</h3>
+        <h4>Contato:</h4>
+        <ul class="footer-list">
+            <li>E-mail:<p> wkboita@gmail.com</p></li>
+            <li>Matrícula:<p> 20250020260</p></li>
+            <li>Linkedin: <a target="_blank" href="https://www.linkedin.com/in/Willian-Kronhardt-Boita/">Willian Kronhardt Boita</a></li>
+            <li>GitHub: <a target="_blank" href="https://github.com/WillianBoita">Willian Boita</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // declarando os textos e imagens dos jogos
+        const gameImg = document.getElementById("game-img");
+        const gameText1 = document.getElementById("game-top1");
+        const gameText2 = document.getElementById("game-top2");
+        const gameText3 = document.getElementById("game-top3");
+
+        // ativando o addeventlistener
+        const button = document.getElementById("switch-game-button").addEventListener('click', e => {
+            // impedir que a página recarregue
+            e.preventDefault();
+
+            // mostrando capa do jogo
+            gameImg.hidden = false
+
+            //alternando a capa do jogo e o peso da fonte a cada clique
+            if (gameImg.src.includes("Super_Smash_Bros._Melee.jpg")){
+                gameImg.src = "../images/nintendo/mariokart.jpeg"
+                gameText1.style.fontWeight = "normal"
+                gameText2.style.fontWeight = "bold"
+            } else if (gameImg.src.includes("mariokart.jpeg")) {
+                gameImg.src = "../images/nintendo/supermariosunshine.jpeg"
+                gameText2.style.fontWeight = "normal"
+                gameText3.style.fontWeight = "bold"
+            } else {
+                gameImg.src = "../images/nintendo/Super_Smash_Bros._Melee.jpg"
+                gameText3.style.fontWeight = "normal"
+                gameText1.style.fontWeight = "bold"
+            }
+        })
+    </script>
+
+  </body>
+</html>
