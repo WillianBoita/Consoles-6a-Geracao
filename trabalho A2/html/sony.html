@@ -4,33 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sony Playstation 2</title>
+    <!-- Importando o Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- Importando o estilo playstation -->
     <link rel="stylesheet" href="../styles/sony.css">
     <!-- Importando a fonte personalizada -->
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
     </style>
+    <!-- Importando o JQuery--> 
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
   </head>
 
   <body class="zalando-sans-expanded-font">
     <!-- Conteúdo do Header -->
-    <header>
+    <header class="p-2 m-2 mb-0">
         <!-- Link para página inicial -->
-        <h1><a href="./home.html" >A 6ª Geração de Consoles</a></h1>
+        <h1><a class="text-decoration-none" href="./home.html" >A 6ª Geração de Consoles</a></h1>
     </header>
 
     <!-- Conteúdo principal -->
-    <main>
+    <main class="d-flex justify-content-between p-2">
         <!-- Seção principal do conteúdo -->
-        <section class="sections">
+        <section class="d-flex flex-column section-color rounded-3 p-2 m-2 mt-0" style="max-width: 750px;">
             <h1>Sony Playstation 2</h1>
             <!-- Imagem do Playstation -->
-            <figure id="console-box">
-                <img id="console-images" src="../images/playstation/PS2-Versions.png" alt="PlayStation 2" height="100px" width="150px">
+            <figure class="d-flex justify-content-center align-items-center h-auto" style="width: 650px;">
+                <img class="w-75 h-auto" src="../images/playstation/PS2-Versions.png" alt="PlayStation 2">
             </figure>
 
             <h2>O que é o Playstation 2?</h2>
-            <p class="main-content">
+            <p class="m-1 p-1 ms-0 ps-0">
                 O PlayStation 2 (PS2) foi o segundo console de videogame da Sony, lançado em 2000, 
                 e é considerado um dos videogames mais importantes e influentes da história. 
                 Sendo o console mais vendido de todos os tempos (com mais de 155 milhões de unidades), 
@@ -40,24 +44,24 @@
 
             <!-- Tabela com as datas de lançamento do console -->
             <h2>Datas de lançamento:</h2>
-            <table class="main-content" border="1" cellspacing="0">
-                <tr class="table-content">
-                    <th>Japão</th>
-                    <th>Estados Unidos</th>
-                    <th>Europa</th>
-                    <th>Brasil</th>
+            <table class="table-bordered m-1 p-1 ms-0 ps-0">
+                <tr>
+                    <th class="text-center m-1 p-1">Japão</th>
+                    <th class="text-center m-1 p-1">Estados Unidos</th>
+                    <th class="text-center m-1 p-1">Europa</th>
+                    <th class="text-center m-1 p-1">Brasil</th>
                 </tr>
-                <tr class="table-content">
-                    <td>4 de março de 2000</td>
-                    <td>26 de outubro de 2000</td>
-                    <td>24 de novembro de 2000</td>
-                    <td>2009 (oficialmente, pela Sony)</td>
+                <tr>
+                    <td class="text-center m-1 p-1">4 de março de 2000</td>
+                    <td class="text-center m-1 p-1">26 de outubro de 2000</td>
+                    <td class="text-center m-1 p-1">24 de novembro de 2000</td>
+                    <td class="text-center m-1 p-1">2009 (oficialmente, pela Sony)</td>
                 </tr>
             </table>
 
             <!-- Lista não ordenada com as informações do hardware -->
             <h2>Hardware:</h2>
-            <ul class="lists">
+            <ul class="d-flex flex-column justify-content-center list-unstyled">
                 <li><p><strong>CPU</strong> - Emotion Engine – processador MIPS R5900 (128 bits), 294 MHz</p></li>
                 <li><p><strong>GPU</strong> - Graphics Synthesizer, clock de 147 MHz, 
                     capaz de processar 75 milhões de polígonos por segundo (teórico)</p></li>
@@ -75,7 +79,7 @@
 
             <!-- Lista não ordenada com as inovações do console -->
             <h2>Inovações:</h2>
-            <ul class="lists">
+            <ul class="d-flex flex-column justify-content-center list-unstyled">
                 <li><p><strong>Leitor de DVD Integrado</strong> - Foi um dos primeiros aparelhos acessíveis que rodavam DVDs.</p></li>
                 <li><p><strong>Compatibilidade com PS1</strong> - Jogava praticamente toda a biblioteca do PS1, 
                     com suporte aos memory cards e controles antigos.</p></li>
@@ -90,21 +94,21 @@
         </section>
 
         <!-- Conteúdo lateral -->
-        <aside class="sections">
+        <aside class="d-flex flex-column section-color rounded-3 p-2 m-2 mt-0">
             <h2>Os 3 jogos mais vendidos:</h2>
             <!-- Lista ordenada dos jogos mais vendidos -->
-            <ol>
+            <ol class="mb-0">
                 <li><p id="game-top1">Grand Theft Auto: San Andreas - 17,3 milhões de cópias</p></li>
                 <li><p id="game-top2">Gran Turismo 3: A-Spec - 14,9 milhões de cópias</p></li>
                 <li><p id="game-top3">Gran Turismo 4 - 11,8 milhões de cópias</p></li>
             </ol>
 
             <!-- Botão que alterna entre as capas dos 3 jogos -->
-            <button type="submit" id="switch-game-button">Trocar capa</button>
+            <button id="switch-game-button" class="btn btn-primary" type="submit">Trocar capa</button>
 
             <!-- Capa do jogo -->
-            <figure id="game-box">
-                <img hidden id="game-img" src="../images/playstation/granturismo4.png" alt="Capa">
+            <figure class="d-flex justify-content-center align-items-center w-100 h-auto mt-3">
+                <img hidden id="game-img" class="w-50 h-auto" src="../images/playstation/granturismo4.png" alt="Capa">
             </figure>
 
             <!-- Curiosidade -->
@@ -121,15 +125,15 @@
     </main>
 
     <!-- Conteúdo do rodapé -->
-    <footer>
+    <footer class="w-100 p-2">
         <!-- Dados pessoais -->
         <h3>Desenvolvido por: Willian Kronhardt Boita</h3>
         <h4>Contato:</h4>
-        <ul class="footer-list">
-            <li>E-mail:<p> wkboita@gmail.com</p></li>
-            <li>Matrícula:<p> 20250020260</p></li>
-            <li>Linkedin: <a target="_blank" href="https://www.linkedin.com/in/Willian-Kronhardt-Boita/">Willian Kronhardt Boita</a></li>
-            <li>GitHub: <a target="_blank" href="https://github.com/WillianBoita">Willian Boita</a></li>
+        <ul class="d-flex flex-column justify-content-center list-unstyled">
+            <li class="d-flex">E-mail:<p class="m-0 ms-1"> wkboita@gmail.com</p></li>
+            <li class="d-flex">Matrícula:<p class="m-0 ms-1"> 20250020260</p></li>
+            <li class="d-flex">Linkedin: <a class="text-decoration-none m-0 ms-1" target="_blank" href="https://www.linkedin.com/in/Willian-Kronhardt-Boita/">Willian Kronhardt Boita</a></li>
+            <li class="d-flex">GitHub: <a class="text-decoration-none m-0 ms-1" target="_blank" href="https://github.com/WillianBoita">Willian Boita</a></li>
         </ul>
     </footer>
 
@@ -151,15 +155,15 @@
             //alternando a capa do jogo e o peso da fonte a cada clique
             if (gameImg.src.includes("granturismo4.png")){
                 gameImg.src = "../images/playstation/gtasanandreas.jpeg"
-                gameText3.style.fontWeight = "normal"
+                gameText3.style.fontWeight = "lighter"
                 gameText1.style.fontWeight = "bold"
             } else if (gameImg.src.includes("gtasanandreas.jpeg")) {
                 gameImg.src = "../images/playstation/granturismo3.jpeg"
-                gameText1.style.fontWeight = "normal"
+                gameText1.style.fontWeight = "lighter"
                 gameText2.style.fontWeight = "bold"
             } else {
                 gameImg.src = "../images/playstation/granturismo4.png"
-                gameText2.style.fontWeight = "normal"
+                gameText2.style.fontWeight = "lighter"
                 gameText3.style.fontWeight = "bold"
             }
         })

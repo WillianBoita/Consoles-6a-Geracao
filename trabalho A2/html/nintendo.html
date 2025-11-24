@@ -4,33 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nintendo GameCube</title>
+    <!-- Importando o Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- Importando o estilo nintendo -->
     <link rel="stylesheet" href="../styles/nintendo.css">
     <!-- Importando a fonte personalizada -->
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
     </style>
+    <!-- Importando o JQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
   </head>
 
   <body class="zalando-sans-expanded-font">
     <!-- Conteúdo do Header -->
-    <header>
+    <header class="p-2 m-2 mb-0">
         <!-- Link para página inicial -->
-        <h1><a href="./home.html">A 6ª Geração de Consoles</a></h1>
+        <h1><a class="text-decoration-none" href="./home.html">A 6ª Geração de Consoles</a></h1>
     </header>
 
     <!-- Conteúdo principal -->
-    <main>
+    <main class="d-flex justify-content-between p-2">
         <!-- Seção principal do conteúdo -->
-        <section class="sections">
+        <section class="d-flex flex-column section-color rounded-3 p-2 m-2 mt-0" style="max-width: 750px;">
             <h1>Nintendo GameCube</h1>
             <!-- Imagem do GameCube -->
-            <figure id="console-box">
-                <img id="console-images" src="../images/nintendo/GameCube-Console-Set.png" alt="Nintendo Gamecube">
+            <figure class="d-flex justify-content-center align-items-center h-auto" style="width: 735px;">
+                <img class="w-75 h-auto" src="../images/nintendo/GameCube-Console-Set.png" alt="Nintendo Gamecube">
             </figure>
 
             <h2>O que é o GameCube?</h2>
-            <p class="main-content">
+            <p class="m-1 p-1 ms-0 ps-0">
                 O Nintendo GameCube foi o console da Nintendo para a 6ª geração, lançado em 2001, 
                 e marcou uma grande mudança para a empresa – 
                 foi seu primeiro videogame a usar mídia óptica (discos) ao invés de cartuchos. 
@@ -41,24 +45,24 @@
 
             <!-- Tabela com as datas de lançamento do console -->
             <h2>Datas de lançamento:</h2>
-            <table class="main-content" border="1" cellspacing="0">
-                <tr class="table-content">
-                    <th>Japão</th>
-                    <th>Estados Unidos</th>
-                    <th>Europa</th>
-                    <th>Brasil</th>
+            <table class="table-bordered m-1 p-1 ms-0 ps-0">
+                <tr>
+                    <th class="text-center m-1 p-1">Japão</th>
+                    <th class="text-center m-1 p-1">Estados Unidos</th>
+                    <th class="text-center m-1 p-1">Europa</th>
+                    <th class="text-center m-1 p-1">Brasil</th>
                 </tr>
-                <tr class="table-content">
-                    <td>14 de setembro de 2001</td>
-                    <td>18 de novembro de 2001</td>
-                    <td>3 de maio de 2002</td>
-                    <td>Nunca lançado oficialmente pela Nintendo (apenas importado por distribuidores paralelos)</td>
+                <tr>
+                    <td class="text-center m-1 p-1">14 de setembro de 2001</td>
+                    <td class="text-center m-1 p-1">18 de novembro de 2001</td>
+                    <td class="text-center m-1 p-1">3 de maio de 2002</td>
+                    <td class="text-center m-1 p-1">Nunca lançado oficialmente pela Nintendo (apenas importado por distribuidores paralelos)</td>
                 </tr>
             </table>
 
             <!-- Lista não ordenada com as informações do hardware -->
             <h2>Hardware:</h2>
-            <ul class="lists">
+            <ul class="d-flex flex-column justify-content-center list-unstyled">
                 <li><p><strong>CPU</strong> - IBM PowerPC “Gekko” – 485 MHz</p></li>
                 <li><p><strong>GPU</strong> - ATI “Flipper” – 162 MHz</p></li>
                 <li><p><strong>RAM</strong> - 24 MB de 1T-SRAM + 16 MB DRAM auxiliar</p></li>
@@ -72,7 +76,7 @@
             
             <!-- Lista não ordenada com as inovações do console -->
             <h2>Inovações:</h2>
-            <ul class="lists">
+            <ul class="d-flex flex-column justify-content-center list-unstyled">
                 <li><p><strong>MiniDVDs</strong> - Menor tempo de loading que os DVDs do PS2.</p></li>
                 <li><p><strong>Controle icônico</strong> - Layout ergonômico, com botão A centralizado e gatilhos analógicos. 
                     Até hoje é usado em competições de Super Smash Bros.</p></li>
@@ -83,21 +87,21 @@
         </section>
         
         <!-- Conteúdo lateral -->
-        <aside class="sections">
+        <aside class="d-flex flex-column section-color rounded-3 p-2 m-2 mt-0">
             <h2>Os 3 jogos mais vendidos:</h2>
             <!-- Lista ordenada dos jogos mais vendidos -->
-            <ol>
+            <ol class="mb-0">
                 <li><p id="game-top1">Super Smash Bros. Melee (2001) - 7,41 milhões de cópias</p></li>
                 <li><p id="game-top2">Mario Kart: Double Dash!! - 6,96 milhões de cópias</p></li>
                 <li><p id="game-top3">Super Mario Sunshine - 6,28 milhões de cópias</p></li>
             </ol>
 
             <!-- Botão que alterna entre as capas dos 3 jogos -->
-            <button type="submit" id="switch-game-button">Trocar capa</button>
+            <button id="switch-game-button" class="btn btn-primary" type="submit">Trocar capa</button>
 
             <!-- Capa do jogo -->
-            <figure id="game-box">
-                <img hidden id="game-img" src="../images/nintendo/supermariosunshine.jpeg" alt="Capa">
+            <figure class="d-flex justify-content-center align-items-center w-100 h-auto mt-3">
+                <img hidden id="game-img" class="w-50 h-auto" src="../images/nintendo/supermariosunshine.jpeg" alt="Capa">
             </figure>
 
             <!-- Curiosidade -->
@@ -109,15 +113,15 @@
     </main>
 
     <!-- Conteúdo do rodapé -->
-    <footer>
+    <footer class="w-100 p-2">
         <!-- Dados pessoais -->
         <h3>Desenvolvido por: Willian Kronhardt Boita</h3>
         <h4>Contato:</h4>
-        <ul class="footer-list">
-            <li>E-mail:<p> wkboita@gmail.com</p></li>
-            <li>Matrícula:<p> 20250020260</p></li>
-            <li>Linkedin: <a target="_blank" href="https://www.linkedin.com/in/Willian-Kronhardt-Boita/">Willian Kronhardt Boita</a></li>
-            <li>GitHub: <a target="_blank" href="https://github.com/WillianBoita">Willian Boita</a></li>
+        <ul class="d-flex flex-column justify-content-center list-unstyled">
+            <li class="d-flex">E-mail: <p class="m-0 ms-1">wkboita@gmail.com</p></li>
+            <li class="d-flex">Matrícula: <p class="m-0 ms-1">20250020260</p></li>
+            <li class="d-flex">Linkedin: <a class="text-decoration-none m-0 ms-1" target="_blank" href="https://www.linkedin.com/in/Willian-Kronhardt-Boita/">Willian Kronhardt Boita</a></li>
+            <li class="d-flex">GitHub: <a class="text-decoration-none m-0 ms-1" target="_blank" href="https://github.com/WillianBoita">Willian Boita</a></li>
         </ul>
     </footer>
 
@@ -139,15 +143,15 @@
             //alternando a capa do jogo e o peso da fonte a cada clique
             if (gameImg.src.includes("Super_Smash_Bros._Melee.jpg")){
                 gameImg.src = "../images/nintendo/mariokart.jpeg"
-                gameText1.style.fontWeight = "normal"
+                gameText1.style.fontWeight = "lighter"
                 gameText2.style.fontWeight = "bold"
             } else if (gameImg.src.includes("mariokart.jpeg")) {
                 gameImg.src = "../images/nintendo/supermariosunshine.jpeg"
-                gameText2.style.fontWeight = "normal"
+                gameText2.style.fontWeight = "lighter"
                 gameText3.style.fontWeight = "bold"
             } else {
                 gameImg.src = "../images/nintendo/Super_Smash_Bros._Melee.jpg"
-                gameText3.style.fontWeight = "normal"
+                gameText3.style.fontWeight = "lighter"
                 gameText1.style.fontWeight = "bold"
             }
         })

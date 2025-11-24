@@ -1,18 +1,10 @@
 @import url("consoles.css"); /* importando o css dos consoles */
 
 /* Adicionando cores do Xbox original */
-header a, .sections h1, .sections h2, .sections strong, .sections p, .sections ol li, td, th, .lists strong, #fact-text{
+* {
     color: #8DD400
 }
 
-body {
-    background-color: #398500
-}
-
-.sections {
-    background-color: #101010
-}
-
-footer {
-    color: #F5F5F5;
+header a {
+    color: #8DD400
 }

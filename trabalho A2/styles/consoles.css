@@ -1,74 +1,11 @@
 /* Importando o estilo home */
 @import url("home.css");
 
-/* Adiciona margem inferior na tabela */
-table {
-    margin-bottom: 8px;
-}
-
-/* Adiciona recuo à esquerda nas listas */
-ol {
-    margin-left: 40px;
-}
-
-/* Define espaçamento e margem nos subtítulos */
-section h2 {
-    padding: 8px 0;
-    margin-top: 12px;
-}
-
-/* Adiciona espaçamento interno na tabela */
-.table-content th, td {
-    padding: 6px;
-}
-
-/* Define margens e espaçamento interno no conteúdo principal */
-.main-content p {
-    margin: 2px 0px;
-    padding: 2px 0px;
-}
-
 /* Define tamanho e borda dourada para a imagem dos jogos */
 #game-img {
-    height: auto;
-    width: 50%;
     border: 1px solid gold;
 }
 
-/* Centraliza a imagem do jogo */
-#game-box {
-    margin-top: 8px;
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Botão que troca a capa dos jogos */
-#switch-game-button {
-    border-radius: 8px;
-    width: 15%;
-    height: auto;
-}
-
-/* Define tamanho da imagem do console principal */
-#console-images {
-    height: auto;
-    width: 80%;
-}
-
-/* Centraliza o console na tela */
-#console-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    width: 735px;
-}
-
-/* Define margens e espaçamento padrão para o texto */
-.sections p {
-    margin: 2px 0px;
-    padding: 2px 0px;
+footer ul li, h1, h2, th, strong{
+    color: #F5F5F5;
 }
