@@ -12,6 +12,8 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
     </style>
+    <!-- Importando o JQuery--> 
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
   </head> 
 
   <body class="zalando-sans-expanded-font">
@@ -47,12 +49,12 @@
 
         <section class="d-flex align-items-center justify-content-between m-2 ms-0" style="width: 80%; height: 300px;">
           <!-- Vídeo humorístico, com autoplay e mutado em looping -->
-          <video class="h-100 w-75 object-fit-fill" id="video" autoplay muted loop>
-            <source src="../images/video/followthetraincj.mp4" type="video/mp4">
+          <video id="video-box" class="h-100 w-75 object-fit-fill" autoplay muted loop>
+            <source id="video" src="../assets/videos/followthetraincj.mp4" type="video/mp4">
           </video>
 
           <!-- Campo em que o código secreto inserido pelo usuário aparece -->
-          <h3 class="ms-5" id="secret-text"></h3>
+          <h3 class="d-flex justify-content-center align-items-end ms-5" id="secret-text"></h3>
         </section>
       </section>
 
@@ -60,7 +62,7 @@
       <aside class="d-flex section-color rounded-3 p-2 m-2 mt-0">
         <!-- Importando imagens do console -->
         <figure class="d-flex justify-content-center align-items-center h-100">
-          <img class="h-auto border border-dark rounded-3" style="width: 500px;" src="../images/9k2giodgxbm31.webp" alt="Consoles da geração">
+          <img class="h-auto border border-dark rounded-3" style="width: 500px;" src="../assets/images/9k2giodgxbm31.webp" alt="Consoles da geração">
         </figure>
       </aside>
     </main>
@@ -90,62 +92,61 @@
       let tocando = false
 
       // Pegando o vídeo e o campo do código pelo DOM
-      const video = document.getElementById("video");
-      const displayCodigo = document.getElementById("secret-text");
+      const video = $("#video")
+      const videoBox = $("#video-box")
+      const displayCodigo = $("#secret-text")
+      const pagina = $(document)
 
-      document.addEventListener('keydown', e => {
-        // Previnindo recarregamento da página
+      // Registrando inputs do teclado
+      pagina.keydown( e => {
         e.preventDefault();
 
-        // Se um evento ainda está tocando, não realiza nenhum evento
         if(tocando === true){
           return;
         }
 
-        // Pegando input do teclado e colocando em caixa alta
-        const tecla = e.key.toUpperCase();
-        displayCodigo.textContent += tecla;
+        const tecla = e.key.toUpperCase()
+        displayCodigo.text(displayCodigo.text() + tecla)
 
-        // Se o código for JUMPJET
-        if(displayCodigo.textContent === codigoVideo){
-          // Altera o vídeo
-          video.src = "../images/video/luanAviao.mp4";
+        if(displayCodigo.html() === codigoVideo){
+          displayCodigo.css("color", "gold")
+          video.attr("src", "../assets/videos/luanAviao.mp4")
+          videoBox.prop("muted", false)
+          videoBox.prop("loop", false)
 
-          // Habilta o som
-          video.muted = false;
+          const playVideo = videoBox.get(0)
+          playVideo.load()
+          playVideo.play()
 
-          // Desabilita o loop
-          video.loop = false;
-
-          // Dá play no vídeo
-          video.play();
-
-          // Confirma que o vídeo está tocando
           tocando = true
 
           // Quando o vídeo acabar
-          video.onended = () => {
-            // Altera para o gif original
-            video.src = "../images/video/followthetraincj.mp4";
-            // Zera o input do código
-            displayCodigo.textContent = '';
-            // Informa que o vídeo não está tocando
-            tocando = false
+          playVideo.onended = () => {
+            displayCodigo.css("color", "white")
+          // Altera para o gif original
+          video.attr("src", "../assets/videos/followthetraincj.mp4")
+          playVideo.load()
+          playVideo.play()
+          // Zera o input do código
+          displayCodigo.text('')
+          // Informa que o vídeo não está tocando
+          tocando = false
           }
         }
 
-        // Se o código for PS2
-        if(displayCodigo.textContent === codigoPS){
+        if(displayCodigo.html() === codigoPS){
+          displayCodigo.css("color", "gold")
           // Toca o áudio do ps2
-          const audio = new Audio("../images/audio/PS2 Startup Screen - QuickSounds.com.mp3");
+          const audio = new Audio("../assets/audio/PS2 Startup Screen - QuickSounds.com.mp3");
           audio.play();
           // Confirma que o áudio está tocando
           tocando = true
 
           // Quando o aúdio acabar
           audio.onended = () => {
+            displayCodigo.css("color", "white")
             // Zera o input do código
-            displayCodigo.textContent = '';
+            displayCodigo.text('')
             // Informa que o áudio não está tocando
             tocando = false
           }
@@ -153,63 +154,70 @@
         }
 
         // Se o código for Xbox
-        if(displayCodigo.textContent === codigoXbox){
+        if(displayCodigo.html() === codigoXbox){
+          displayCodigo.css("color", "gold")
           // Toca o áudio do Xbox
-          const audio = new Audio("../images/audio/xbox-2001-startup.mp3");
+          const audio = new Audio("../assets/audio/xbox-2001-startup.mp3");
           audio.play();
           // Confirma que o áudio está tocando
           tocando = true
 
           // Quando o aúdio acabar
           audio.onended = () => {
+            displayCodigo.css("color", "white")
             // Zera o input do código
-            displayCodigo.textContent = '';
+            displayCodigo.text('')
             // Informa que o áudio não está tocando
             tocando = false
           }
 
         }
 
-        // Se o código for Xbox
-        if(displayCodigo.textContent === codigoNintendo){
-          // Toca o áudio do Xbox
-          const audio = new Audio("../images/audio/gamecube-startup.mp3");
+        // Se o código for Nintendo
+        if(displayCodigo.html() === codigoNintendo){
+          displayCodigo.css("color", "gold")
+          // Toca o áudio do Nintendo
+          const audio = new Audio("../assets/audio/gamecube-startup.mp3");
           audio.play();
           // Confirma que o áudio está tocando
           tocando = true
 
           // Quando o aúdio acabar
           audio.onended = () => {
+            displayCodigo.css("color", "white")
             // Zera o input do código
-            displayCodigo.textContent = '';
+            displayCodigo.text('')
             // Informa que o áudio não está tocando
             tocando = false
           }
 
         }
 
-        // Se o código for Xbox
-        if(displayCodigo.textContent === codigoSega){
-          // Toca o áudio do Xbox
-          const audio = new Audio("../images/audio/dreamcast_startup.mp3");
+        // Se o código for Dreamcast
+        if(displayCodigo.html() === codigoSega){
+          displayCodigo.css("color", "gold")
+          // Toca o áudio do Dreamcast
+          const audio = new Audio("../assets/audio/dreamcast_startup.mp3");
           audio.play();
           // Confirma que o áudio está tocando
           tocando = true
 
           // Quando o aúdio acabar
           audio.onended = () => {
+            displayCodigo.css("color", "white")
             // Zera o input do código
-            displayCodigo.textContent = '';
+            displayCodigo.text('')
             // Informa que o áudio não está tocando
             tocando = false
           }
         }
 
         // Se o código passar de 7 dígitos, zera
-        if(displayCodigo.textContent.length >= 7){
-          displayCodigo.textContent = '';
+        if(displayCodigo.text().length - 2 >= 7){
+          displayCodigo.text('')
         }
       })
+
     </script>
   </body>
 </html>

@@ -30,7 +30,7 @@
             <h1>Sega Dreamcast</h1>
             <!-- Imagem do Dreamcast -->
             <figure class="d-flex justify-content-center align-items-center h-auto" style="width: 650px;">
-                <img class="w-75 h-auto" src="../images/sega/Dreamcast-Console-Set.png" alt="Dreamcast">
+                <img class="w-75 h-auto" src="../assets/images/sega/Dreamcast-Console-Set.png" alt="Dreamcast">
             </figure>
 
             <h2>O que é o Dreamcast?</h2>
@@ -101,7 +101,7 @@
 
             <!-- Capa do jogo -->
             <figure class="d-flex justify-content-center align-items-center w-100 h-auto mt-3">
-                <img hidden id="game-img" class="w-50 h-auto" src="../images/sega/crazytaxi.jpeg" alt="Capa">
+                <img hidden id="game-img" class="w-50 h-auto" src="../assets/images/sega/crazytaxi.jpeg" alt="Capa">
             </figure>
 
             <!-- Curiosidade -->
@@ -124,33 +124,35 @@
     </footer>
 
     <script>
-        // declarando os textos e imagens dos jogos
-        const gameImg = document.getElementById("game-img");
-        const gameText1 = document.getElementById("game-top1");
-        const gameText2 = document.getElementById("game-top2");
-        const gameText3 = document.getElementById("game-top3");
+        const gameImg = $("#game-img") 
+        const gameText1 = $("#game-top1")
+        const gameText2 = $("#game-top2")
+        const gameText3 = $("#game-top3")
 
         // ativando o addeventlistener
-        const button = document.getElementById("switch-game-button").addEventListener('click', e => {
+        const button = $("#switch-game-button")
+        button.click(e => {
             // impedir que a página recarregue
             e.preventDefault();
 
             // mostrando capa do jogo
-            gameImg.hidden = false
+            gameImg.prop("hidden", false)
 
+            let url = gameImg.attr("src")
+            
             //alternando a capa do jogo e o peso da fonte a cada clique
-            if (gameImg.src.includes("crazytaxi.jpeg")){
-                gameImg.src = "../images/sega/sonicadventure.webp"
-                gameText3.style.fontWeight = "lighter"
-                gameText1.style.fontWeight = "bold"
-            } else if (gameImg.src.includes("sonicadventure.webp")) {
-                gameImg.src = "../images/sega/soulcalibur.jpeg"
-                gameText1.style.fontWeight = "lighter"
-                gameText2.style.fontWeight = "bold"
+            if (url.includes("crazytaxi.jpeg")){
+                gameImg.attr("src", "../assets/images/sega/sonicadventure.webp")
+                gameText3.css("fontWeight", "lighter") 
+                gameText1.css("fontWeight", "bold") 
+            } else if (url.includes("sonicadventure.webp")) {
+                gameImg.attr("src", "../assets/images/sega/soulcalibur.jpeg")
+                gameText1.css("fontWeight", "lighter") 
+                gameText2.css("fontWeight", "bold") 
             } else {
-                gameImg.src = "../images/sega/crazytaxi.jpeg"
-                gameText2.style.fontWeight = "lighter"
-                gameText3.style.fontWeight = "bold"
+                gameImg.attr("src", "../assets/images/sega/crazytaxi.jpeg")                
+                gameText2.css("fontWeight", "lighter") 
+                gameText3.css("fontWeight", "bold") 
             }
         })
     </script>

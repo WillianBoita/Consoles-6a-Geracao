@@ -30,7 +30,7 @@
             <h1>Microsoft Xbox</h1>
             <!-- Imagem do Playstation -->
             <figure class="d-flex justify-content-center align-items-center" style="width: 700px;">
-                <img class="w-75 h-auto" src="../images/xbox/Xbox-Console-Set.png" alt="Xbox Original">
+                <img class="w-75 h-auto" src="../assets/images/xbox/Xbox-Console-Set.png" alt="Xbox Original">
             </figure>
 
             <h2>O que é o Xbox?</h2>
@@ -102,7 +102,7 @@
 
             <!-- Capa do jogo -->
             <figure class="d-flex justify-content-center align-items-center w-100 h-auto mt-3">
-                <img hidden id="game-img" class="w-50 h-auto" src="../images/xbox/fable.jpeg" alt="Capa">
+                <img hidden id="game-img" class="w-50 h-auto" src="../assets/images/xbox/fable.jpeg" alt="Capa">
             </figure>
 
             <!-- Curiosidade -->
@@ -125,33 +125,35 @@
     </footer>
 
     <script>
-        // declarando os textos e imagens dos jogos
-        const gameImg = document.getElementById("game-img");
-        const gameText1 = document.getElementById("game-top1");
-        const gameText2 = document.getElementById("game-top2");
-        const gameText3 = document.getElementById("game-top3");
+        const gameImg = $("#game-img") 
+        const gameText1 = $("#game-top1")
+        const gameText2 = $("#game-top2")
+        const gameText3 = $("#game-top3")
 
         // ativando o addeventlistener
-        const button = document.getElementById("switch-game-button").addEventListener('click', e => {
+        const button = $("#switch-game-button")
+        button.click(e => {
             // impedir que a página recarregue
             e.preventDefault();
 
             // mostrando capa do jogo
-            gameImg.hidden = false
+            gameImg.prop("hidden", false)
 
+            let url = gameImg.attr("src")
+            
             //alternando a capa do jogo e o peso da fonte a cada clique
-            if (gameImg.src.includes("fable.jpeg")){
-                gameImg.src = "../images/xbox/Halo_2_box_art.webp"
-                gameText3.style.fontWeight = "lighter"
-                gameText1.style.fontWeight = "bold"
-            } else if (gameImg.src.includes("Halo_2_box_art.webp")) {
-                gameImg.src = "../images/xbox/haloevolved.jpeg"
-                gameText1.style.fontWeight = "lighter"
-                gameText2.style.fontWeight = "bold"
+            if (url.includes("fable.jpeg")){
+                gameImg.attr("src", "../assets/images/xbox/Halo_2_box_art.webp")
+                gameText3.css("fontWeight", "lighter") 
+                gameText1.css("fontWeight", "bold") 
+            } else if (url.includes("Halo_2_box_art.webp")) {
+                gameImg.attr("src", "../assets/images/xbox/haloevolved.jpeg")
+                gameText1.css("fontWeight", "lighter") 
+                gameText2.css("fontWeight", "bold") 
             } else {
-                gameImg.src = "../images/xbox/fable.jpeg"
-                gameText2.style.fontWeight = "lighter"
-                gameText3.style.fontWeight = "bold"
+                gameImg.attr("src", "../assets/images/xbox/fable.jpeg")                
+                gameText2.css("fontWeight", "lighter") 
+                gameText3.css("fontWeight", "bold") 
             }
         })
     </script>
