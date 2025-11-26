@@ -30,7 +30,7 @@
             <h1>Nintendo GameCube</h1>
             <!-- Imagem do GameCube -->
             <figure class="d-flex justify-content-center align-items-center h-auto" style="width: 735px;">
-                <img class="w-75 h-auto" src="../images/nintendo/GameCube-Console-Set.png" alt="Nintendo Gamecube">
+                <img class="w-75 h-auto" src="../assets/images/nintendo/GameCube-Console-Set.png" alt="Nintendo Gamecube">
             </figure>
 
             <h2>O que é o GameCube?</h2>
@@ -101,7 +101,7 @@
 
             <!-- Capa do jogo -->
             <figure class="d-flex justify-content-center align-items-center w-100 h-auto mt-3">
-                <img hidden id="game-img" class="w-50 h-auto" src="../images/nintendo/supermariosunshine.jpeg" alt="Capa">
+                <img hidden id="game-img" class="w-50 h-auto" src="../assets/images/nintendo/supermariosunshine.jpeg" alt="Capa">
             </figure>
 
             <!-- Curiosidade -->
@@ -126,33 +126,35 @@
     </footer>
 
     <script>
-        // declarando os textos e imagens dos jogos
-        const gameImg = document.getElementById("game-img");
-        const gameText1 = document.getElementById("game-top1");
-        const gameText2 = document.getElementById("game-top2");
-        const gameText3 = document.getElementById("game-top3");
+        const gameImg = $("#game-img") 
+        const gameText1 = $("#game-top1")
+        const gameText2 = $("#game-top2")
+        const gameText3 = $("#game-top3")
 
         // ativando o addeventlistener
-        const button = document.getElementById("switch-game-button").addEventListener('click', e => {
+        const button = $("#switch-game-button")
+        button.click(e => {
             // impedir que a página recarregue
             e.preventDefault();
 
             // mostrando capa do jogo
-            gameImg.hidden = false
+            gameImg.prop("hidden", false)
 
+            let url = gameImg.attr("src")
+            
             //alternando a capa do jogo e o peso da fonte a cada clique
-            if (gameImg.src.includes("Super_Smash_Bros._Melee.jpg")){
-                gameImg.src = "../images/nintendo/mariokart.jpeg"
-                gameText1.style.fontWeight = "lighter"
-                gameText2.style.fontWeight = "bold"
-            } else if (gameImg.src.includes("mariokart.jpeg")) {
-                gameImg.src = "../images/nintendo/supermariosunshine.jpeg"
-                gameText2.style.fontWeight = "lighter"
-                gameText3.style.fontWeight = "bold"
+            if (url.includes("Super_Smash_Bros._Melee.jpg")){
+                gameImg.attr("src", "../assets/images/nintendo/mariokart.jpeg")
+                gameText1.css("fontWeight", "lighter") 
+                gameText2.css("fontWeight", "bold") 
+            } else if (url.includes("mariokart.jpeg")) {
+                gameImg.attr("src", "../assets/images/nintendo/supermariosunshine.jpeg")
+                gameText2.css("fontWeight", "lighter") 
+                gameText3.css("fontWeight", "bold") 
             } else {
-                gameImg.src = "../images/nintendo/Super_Smash_Bros._Melee.jpg"
-                gameText3.style.fontWeight = "lighter"
-                gameText1.style.fontWeight = "bold"
+                gameImg.attr("src", "../assets/images/nintendo/Super_Smash_Bros._Melee.jpg")                
+                gameText3.css("fontWeight", "lighter") 
+                gameText1.css("fontWeight", "bold") 
             }
         })
     </script>
