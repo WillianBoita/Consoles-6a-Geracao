@@ -23,17 +23,18 @@
         <h1><a class="text-decoration-none" href="./home.html">A 6ª Geração de Consoles</a></h1>
     </header>
 
-    <!-- Conteúdo principal -->
+    <!-- Conteúdo principal com padding e espaçamento -->
     <main class="d-flex justify-content-between p-2">
-        <!-- Seção principal do conteúdo -->
+        <!-- Seção principal do conteúdo, alinhado em colunas -->
         <section class="d-flex flex-column section-color rounded-3 p-2 m-2 mt-0" style="max-width: 750px;">
             <h1>Nintendo GameCube</h1>
-            <!-- Imagem do GameCube -->
+            <!-- Imagem do GameCube, centralizada e com tamanho dinâmico -->
             <figure class="d-flex justify-content-center align-items-center h-auto w-100" style="max-width: 735px;">
                 <img class="w-75 h-auto" src="../assets/images/nintendo/GameCube-Console-Set.png" alt="Nintendo Gamecube">
             </figure>
 
             <h2>O que é o GameCube?</h2>
+            <!-- Formatação de parágrafo -->
             <p class="m-1 p-1 ms-0 ps-0">
                 O Nintendo GameCube foi o console da Nintendo para a 6ª geração, lançado em 2001, 
                 e marcou uma grande mudança para a empresa – 
@@ -45,7 +46,9 @@
 
             <!-- Tabela com as datas de lançamento do console -->
             <h2>Datas de lançamento:</h2>
+            <!-- Tabela com borda e espaçamento -->
             <table class="table-bordered m-1 p-1 ms-0 ps-0">
+                <!-- Textos centralizados e espaçamento interno -->
                 <tr>
                     <th class="text-center m-1 p-1">Japão</th>
                     <th class="text-center m-1 p-1">Estados Unidos</th>
@@ -62,6 +65,7 @@
 
             <!-- Lista não ordenada com as informações do hardware -->
             <h2>Hardware:</h2>
+            <!-- Lista centralziada e sem estilo -->
             <ul class="d-flex flex-column justify-content-center list-unstyled">
                 <li><p><strong>CPU</strong> - IBM PowerPC “Gekko” – 485 MHz</p></li>
                 <li><p><strong>GPU</strong> - ATI “Flipper” – 162 MHz</p></li>
@@ -76,6 +80,7 @@
             
             <!-- Lista não ordenada com as inovações do console -->
             <h2>Inovações:</h2>
+            <!-- Lista centralziada e sem estilo -->
             <ul class="d-flex flex-column justify-content-center list-unstyled">
                 <li><p><strong>MiniDVDs</strong> - Menor tempo de loading que os DVDs do PS2.</p></li>
                 <li><p><strong>Controle icônico</strong> - Layout ergonômico, com botão A centralizado e gatilhos analógicos. 
@@ -86,7 +91,7 @@
             </ul>
         </section>
         
-        <!-- Conteúdo lateral -->
+        <!-- Conteúdo lateral, em colunas e arredondado -->
         <aside class="d-flex flex-column section-color rounded-3 p-2 m-2 mt-0">
             <h2>Os 3 jogos mais vendidos:</h2>
             <!-- Lista ordenada dos jogos mais vendidos -->
@@ -96,10 +101,10 @@
                 <li><p id="game-top3">Super Mario Sunshine - 6,28 milhões de cópias</p></li>
             </ol>
 
-            <!-- Botão que alterna entre as capas dos 3 jogos -->
+            <!-- Botão que alterna entre as capas dos 3 jogos, do tipo primário -->
             <button id="switch-game-button" class="btn btn-primary" type="submit">Trocar capa</button>
 
-            <!-- Capa do jogo -->
+            <!-- Capa do jogo, centralizada e dinâmica -->
             <figure class="d-flex justify-content-center align-items-center w-100 h-auto mt-3">
                 <img hidden id="game-img" class="w-50 h-auto" src="../assets/images/nintendo/supermariosunshine.jpeg" alt="Capa">
             </figure>
@@ -117,6 +122,7 @@
         <!-- Dados pessoais -->
         <h3>Desenvolvido por: Willian Kronhardt Boita</h3>
         <h4>Contato:</h4>
+        <!-- Lista centralziada e sem estilo -->
         <ul class="d-flex flex-column justify-content-center list-unstyled">
             <li class="d-flex">E-mail: <p class="m-0 ms-1">wkboita@gmail.com</p></li>
             <li class="d-flex">Matrícula: <p class="m-0 ms-1">20250020260</p></li>
@@ -129,7 +135,7 @@
         const gameImg = $("#game-img") 
         const gameText1 = $("#game-top1")
         const gameText2 = $("#game-top2")
-        const gameText3 = $("#game-top3")
+        const gameText3 = $("#game-top3") 
 
         // ativando o addeventlistener
         const button = $("#switch-game-button")
